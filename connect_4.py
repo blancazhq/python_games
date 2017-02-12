@@ -9,8 +9,8 @@ def win_checker(player_name):
     winner = ""
 
     # i represents columns; j represents rows
-    for i in range(3):
-        for j in range(2):
+    for i in range(4):
+        for j in range(3):
             if game_record[i][j] == game_record[i+1][j] == game_record[i+2][j] == game_record[i+3][j] and game_record[i][j] != " ":
                 win_checker_handler = True
                 runner = False
