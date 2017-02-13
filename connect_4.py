@@ -80,14 +80,13 @@ def make_a_move(player_name, draw):
             while True:
                 player_message = raw_input("\n"+player_name + ", what column do you want to draw an " + draw + "? (1~7)")
                 if player_message not in ["1", "2", "3", "4" ,"5", "6", "7"]:
-                    print "\nNot a number. Please put in a number\n"
+                    print "\nNot a valid input. Please put in a number between 1 and 7.\n"
                 else:
                     player_input = int(player_message) - 1
                     break
             while True:
                 if " " not in game_record[player_input]:
-                    print "\nThe position is already taken.\n"
-                    player_message = raw_input("\n"+player_name + ", what column do you want to draw an " + draw + " ? (1~7)")
+                    print "\nThe column is already full.\n"
                     break
                 else:
                     input_checker = True
